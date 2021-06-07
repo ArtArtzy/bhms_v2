@@ -25,6 +25,13 @@ export default function (/* { store, ssrContext } */) {
     mode: process.env.VUE_ROUTER_MODE,
     base: process.env.VUE_ROUTER_BASE
   })
-
   return Router
+
 }
+Vue.mixin({
+  data() {
+    return {
+      version: '0.1'
+    }
+  },
+})
