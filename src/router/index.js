@@ -31,7 +31,16 @@ export default function (/* { store, ssrContext } */) {
 Vue.mixin({
   data() {
     return {
-      version: '0.1'
+      version: '1.0.0',
+      sensorList: [{
+        set: "A1",
+        sensor: ["AC01", "AC02", "AC03", "TM01", "SG01", "LV01", "LV02"]
+      },
+      {
+        set: "A2",
+        sensor: ["AC01", "TM01", "TM02", "LV01"]
+      }
+      ]
     }
   },
 })

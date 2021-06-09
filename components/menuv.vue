@@ -8,7 +8,7 @@
       <div align="center" class="text-h6">Overall</div>
     </div>
     <!-- Monitor icon -->
-    <div class="icon text-white" :class="{'bg-blue':activeMenu==2}">
+    <div class="icon text-white" :class="{'bg-blue':activeMenu==2}" @click="gotoMonitor()">
       <div align="center" style="padding-top:35px;">
         <q-icon size="40px" name="fas fa-chart-bar" />
       </div>
@@ -45,6 +45,11 @@ export default {
     },
   },
   data() {},
+  methods: {
+    gotoMonitor() {
+      this.$router.push("monitor");
+    },
+  },
 };
 </script>
 
@@ -52,6 +57,7 @@ export default {
 .icon {
   height: 130px;
   width: 130px;
+  background-color: #3c4dae;
 }
 .iconsize {
   size: 70px;
@@ -67,5 +73,9 @@ export default {
   position: absolute;
   bottom: 0px;
   text-align: center;
+}
+.icon:hover {
+  background-color: yellow;
+  cursor: pointer;
 }
 </style>

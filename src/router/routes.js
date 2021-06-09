@@ -17,6 +17,21 @@ const routes = [
     path: '/project',
     component: () => import('pages/project.vue'),
     name: 'project'
+  },
+  {
+    path: '/monitor',
+    component: () => import('pages/monitor.vue'),
+    name: 'monitor'
+  },
+  {
+    path: '/report',
+    component: () => import('pages/report.vue'),
+    name: 'report'
+  },
+  {
+    path: '/setting',
+    component: () => import('pages/setting.vue'),
+    name: 'setting'
   }
 ]
 
