@@ -11,7 +11,7 @@
             <div class="q-pt-md">Start date: time</div>
             <!-- start date input -->
             <div>
-              <div class="q-pb-md" style="width: 100%">
+              <div class="q-pb-md" style="max-width: 500px">
                 <q-input filled v-model="startDate" color="black" bg-color="grey-2">
                   <template v-slot:prepend>
                     <q-icon name="event" class="cursor-pointer">
