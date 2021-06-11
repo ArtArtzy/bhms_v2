@@ -32,7 +32,7 @@
             />
           </div>
           <div align="center" class="q-pt-md">
-            <q-btn color="amber" glossy label="Login" style="width:150px;" class="text-black" />
+            <q-btn color="amber" glossy label="Login" style="width:150px;" class="text-black" @click="goToSettingMain()" />
           </div>
            <div
             align="center"
@@ -46,7 +46,7 @@
       <div class="orientation-landscape row" v-if="$q.screen.height>=500">
         <!-- Menu -->
         <div class="col-1" style="width:130px">
-          <menuv :activeMenu="4" :versionShow="version"></menuv>
+          <menuv :activeMenu="4"></menuv>
         </div>
         <!-- //เนื้อเรื่อง -->
         <div class="col q-px-md text-body1 contentdiv">
@@ -89,7 +89,7 @@
       <div class="orientation-landscape row" v-if="$q.screen.height< 500"><notsupport></notsupport> </div>
     </div>
  
-  </div>
+
 </template>
 
 <script>
@@ -108,6 +108,11 @@ export default {
         username: "",
       },
     };
+  },
+  methods: {
+    goToSettingMain() {
+      this.$router.push("setting/main")     
+    }
   },
 };
 </script>

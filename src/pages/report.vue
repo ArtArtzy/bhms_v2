@@ -80,7 +80,7 @@
                 <b>{{sensorList[0].set}}</b>
               </div>
               <div class="row">
-                <div class="col-4" v-for="(item,index) in sensorList[0].sensor">
+                <div class="col-4" v-for="(item,index) in sensorList[0].sensor"  :key="index">
                   <q-checkbox dark v-model="sensorShow1[index]" :label="item" />
                 </div>
               </div>
@@ -93,7 +93,7 @@
                 <b>{{sensorList[1].set}}</b>
               </div>
               <div class="row">
-                <div class="col-4" v-for="(item,index) in sensorList[1].sensor">
+                <div class="col-4" v-for="(item,index) in sensorList[1].sensor"  :key="index">
                   <q-checkbox dark v-model="sensorShow2[index]" :label="item" />
                 </div>
               </div>
@@ -106,7 +106,7 @@
                 <b>{{sensorList[2].set}}</b>
               </div>
               <div class="row">
-                <div class="col-4" v-for="(item,index) in sensorList[2].sensor">
+                <div class="col-4" v-for="(item,index) in sensorList[2].sensor"  :key="index">
                   <q-checkbox dark v-model="sensorShow3[index]" :label="item" />
                 </div>
               </div>
@@ -119,7 +119,7 @@
                 <b>{{sensorList[3].set}}</b>
               </div>
               <div class="row">
-                <div class="col-4" v-for="(item,index) in sensorList[3].sensor">
+                <div class="col-4" v-for="(item,index) in sensorList[3].sensor" :key="index" >
                   <q-checkbox dark v-model="sensorShow4[index]" :label="item" />
                 </div>
               </div>
@@ -132,7 +132,7 @@
                 <b>{{sensorList[4].set}}</b>
               </div>
               <div class="row">
-                <div class="col-4" v-for="(item,index) in sensorList[4].sensor">
+                <div class="col-4" v-for="(item,index) in sensorList[4].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow5[index]" :label="item" />
                 </div>
               </div>
@@ -156,7 +156,7 @@
       <div class="orientation-landscape row" v-if="$q.screen.height>=500">
         <!-- Menu -->
         <div class="col-1" style="width:130px">
-          <menuv :activeMenu="3" :versionShow="version"></menuv>
+          <menuv :activeMenu="3" ></menuv>
         </div>
         <!-- //เนื้อเรื่อง -->
         <div class="col q-px-md text-body1 contentdiv">
@@ -236,7 +236,7 @@
                 <b>{{sensorList[0].set}}</b>
               </div>
               <div class="row">
-                <div class="col-3" v-for="(item,index) in sensorList[0].sensor">
+                <div class="col-3" v-for="(item,index) in sensorList[0].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow1[index]" :label="item" />
                 </div>
               </div>
@@ -249,7 +249,7 @@
                 <b>{{sensorList[1].set}}</b>
               </div>
               <div class="row">
-                <div class="col-3" v-for="(item,index) in sensorList[1].sensor">
+                <div class="col-3" v-for="(item,index) in sensorList[1].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow2[index]" :label="item" />
                 </div>
               </div>
@@ -262,7 +262,7 @@
                 <b>{{sensorList[2].set}}</b>
               </div>
               <div class="row">
-                <div class="col-3" v-for="(item,index) in sensorList[2].sensor">
+                <div class="col-3" v-for="(item,index) in sensorList[2].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow3[index]" :label="item" />
                 </div>
               </div>
@@ -275,7 +275,7 @@
                 <b>{{sensorList[3].set}}</b>
               </div>
               <div class="row">
-                <div class="col-3" v-for="(item,index) in sensorList[3].sensor">
+                <div class="col-3" v-for="(item,index) in sensorList[3].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow4[index]" :label="item" />
                 </div>
               </div>
@@ -288,7 +288,7 @@
                 <b>{{sensorList[4].set}}</b>
               </div>
               <div class="row">
-                <div class="col-3" v-for="(item,index) in sensorList[4].sensor">
+                <div class="col-3" v-for="(item,index) in sensorList[4].sensor" :key="index">
                   <q-checkbox dark v-model="sensorShow5[index]" :label="item" />
                 </div>
               </div>

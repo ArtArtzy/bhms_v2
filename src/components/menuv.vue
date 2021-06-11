@@ -28,13 +28,13 @@
       </div>
       <div align="center" class="text-h6">Setting</div>
     </div>
-    <div class="text-white footer" align="center">version {{versionShow}}</div>
+   
   </div>
 </template>
 
 <script>
 export default {
-  props: ["activeMenu", "versionShow"],
+  props: ["activeMenu"],
   methods: {
     gotoProject() {
       this.$router.push("project");
