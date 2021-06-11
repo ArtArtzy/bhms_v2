@@ -1,6 +1,6 @@
-# bridge health monitor ver 2 (bhms2)
+# BHMS (bmhsii)
 
-Health monitor system
+BHMS
 
 ## Install the dependencies
 ```bash
