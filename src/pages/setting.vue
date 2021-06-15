@@ -1,101 +1,123 @@
 <template>
   <div class="bgcolor text-blue-grey-3">
-      <!-- สำหรับหน้าจอแนวตั้ง -->
-      <div class="orientation-portrait">
-        <div class="col q-px-md text-body1 contentdiv2">
-          <div class="text-h6 q-pt-sm">Setting</div>
-          <hr />
-          <div align="center" class="q-py-md">
-            <img src="../assets/logobhms.png" style="width:70%; max-width: 250px;" alt />
-          </div>
-          <div align="center">
-            <q-input
-              outlined
-              v-model="input.username"
-              style="width:300px;"
-              label="Username"
-              color="black"
-              bg-color="grey-2"
-              dense
-            />
-          </div>
-          <div align="center" class="q-pt-md">
-            <q-input
-              outlined
-              v-model="input.password"
-              style="width:300px;"
-              label="Password"
-              color="black"
-              bg-color="grey-2"
-              type="password"
-              dense
-            />
-          </div>
-          <div align="center" class="q-pt-md">
-            <q-btn color="amber" glossy label="Login" style="width:150px;" class="text-black" @click="goToSettingMain()" />
-          </div>
-           <div
-            align="center"
-            class="q-py-md"
-          >If you want to access this section, please contact Dr. Kittipoom Rodsin.</div>
+    <!-- สำหรับหน้าจอแนวตั้ง -->
+    <div class="orientation-portrait">
+      <div class="col q-px-md text-body1 contentdiv2">
+        <div class="text-h6 q-pt-sm">Setting</div>
+        <hr />
+        <div align="center" class="q-py-md">
+          <img
+            src="../assets/logobhms.png"
+            style="width:70%; max-width: 250px;"
+            alt
+          />
         </div>
-        <menuh :activeMenu="4"></menuh>
+        <div align="center">
+          <q-input
+            outlined
+            v-model="input.username"
+            style="width:300px;"
+            label="Username"
+            color="black"
+            bg-color="grey-2"
+            dense
+          />
         </div>
-      
-      <!-- **********สำหรับจอ landscape*********** -->
-      <div class="orientation-landscape row" v-if="$q.screen.height>=500">
-        <!-- Menu -->
-        <div class="col-1" style="width:130px">
-          <menuv :activeMenu="4"></menuv>
+        <div align="center" class="q-pt-md">
+          <q-input
+            outlined
+            v-model="input.password"
+            style="width:300px;"
+            label="Password"
+            color="black"
+            bg-color="grey-2"
+            type="password"
+            dense
+          />
         </div>
-        <!-- //เนื้อเรื่อง -->
-        <div class="col q-px-md text-body1 contentdiv">
-          <div class="text-h5 q-pt-sm">Setting</div>
-          <hr />
-          <div align="center" class="q-py-md">
-            <img src="../assets/logobhms.png" style="width:25%; max-width: 250px;" alt />
-          </div>
-          <div align="center">
-            <q-input
-              outlined
-              v-model="input.username"
-              style="width:300px;"
-              label="Username"
-              color="black"
-              bg-color="grey-2"
-            />
-          </div>
-          <div align="center" class="q-pt-md">
-            <q-input
-              outlined
-              v-model="input.password"
-              style="width:300px;"
-              label="Password"
-              color="black"
-              bg-color="grey-2"
-              type="password"
-            />
-          </div>
-          <div align="center" class="q-pt-md">
-            <q-btn color="amber" glossy label="Login" style="width:150px;" class="text-black" />
-          </div>
-          <div
-            align="center"
-            class="q-pt-md"
-          >If you want to access this section, please contact Dr. Kittipoom Rodsin.</div>
+        <div align="center" class="q-pt-md">
+          <q-btn
+            color="amber"
+            glossy
+            label="Login"
+            style="width:150px;"
+            class="text-black"
+            @click="goToSettingMain()"
+          />
+        </div>
+        <div align="center" class="q-py-md">
+          If you want to access this section, please contact Dr. Kittipoom
+          Rodsin.
         </div>
       </div>
-         <!-- กรณีจอที่มีความสูงน้องเกินไป -->
-      <div class="orientation-landscape row" v-if="$q.screen.height< 500"><notsupport></notsupport> </div>
+      <menuh :activeMenu="4"></menuh>
     </div>
- 
 
+    <!-- **********สำหรับจอ landscape*********** -->
+    <div class="orientation-landscape row" v-if="$q.screen.height >= 500">
+      <!-- Menu -->
+      <div class="col-1" style="width:130px">
+        <menuv :activeMenu="4"></menuv>
+      </div>
+      <!-- //เนื้อเรื่อง -->
+      <div class="col q-px-md text-body1 contentdiv">
+        <div class="text-h5 q-pt-sm">Setting</div>
+        <hr />
+        <div align="center" class="q-py-md">
+          <img
+            src="../assets/logobhms.png"
+            style="width:25%; max-width: 250px;"
+            alt
+          />
+        </div>
+        <div align="center">
+          <q-input
+            outlined
+            v-model="input.username"
+            style="width:300px;"
+            label="Username"
+            color="black"
+            bg-color="grey-2"
+          />
+        </div>
+        <div align="center" class="q-pt-md">
+          <q-input
+            outlined
+            v-model="input.password"
+            style="width:300px;"
+            label="Password"
+            color="black"
+            bg-color="grey-2"
+            type="password"
+          />
+        </div>
+        <div align="center" class="q-pt-md">
+          <q-btn
+            color="amber"
+            glossy
+            label="Login"
+            style="width:150px;"
+            class="text-black"
+          />
+        </div>
+        <div align="center" class="q-pt-md">
+          If you want to access this section, please contact Dr. Kittipoom
+          Rodsin.
+        </div>
+      </div>
+    </div>
+    <!-- กรณีจอที่มีความสูงน้องเกินไป -->
+    <div class="orientation-landscape row" v-if="$q.screen.height < 500">
+      <notsupport></notsupport>
+    </div>
+  </div>
 </template>
 
 <script>
 import menuv from "../components/menuv.vue";
 import menuh from "../components/menuh.vue";
 import notsupport from "../components/notsupport.vue";
+import { db } from "src/router";
 export default {
   components: {
     menuv,
@@ -105,15 +127,24 @@ export default {
   data() {
     return {
       input: {
-        username: "",
-      },
+        username: ""
+      }
     };
   },
   methods: {
     goToSettingMain() {
-      this.$router.push("setting/main")     
+      this.$router.push("settingmain");
     }
   },
+  mounted() {
+    db.collection("road9_admin")
+      .get()
+      .then(doc => {
+        doc.forEach(data => {
+          console.log(data.data());
+        });
+      });
+  }
 };
 </script>
 

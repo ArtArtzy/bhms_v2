@@ -324,6 +324,7 @@ export default {
     return {
       startDate: "01-02-2021 12:44",
       endDate: "01-02-2021 12:44",
+      sensorListData : [],
       showLimit: true,
       sensorShow1: [],
       sensorShow2: [],
