@@ -38,7 +38,7 @@ const routes = [
   {
     path: "/init",
     component: () => import("pages/init.vue"),
-    name: "settingmain"
+    name: "init"
   }
 ];
 

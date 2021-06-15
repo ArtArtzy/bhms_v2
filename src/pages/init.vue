@@ -110,7 +110,8 @@ export default {
                 Y_enable: true,
                 Y_limit: 10,
                 Z_enable: true,
-                Z_limit: 10
+                Z_limit: 10,
+                name: this.sensorList[indexSet].sensor[indexSensor]
               };
               db.collection(project_config)
                 .doc(fieldName)
@@ -125,7 +126,8 @@ export default {
                 min_enable: true,
                 min_limit: 10,
                 max_enable: true,
-                max_limit: 10
+                max_limit: 10,
+                name: this.sensorList[indexSet].sensor[indexSensor]
               };
               db.collection(project_config)
                 .doc(fieldName)
@@ -138,7 +140,8 @@ export default {
                 index: count,
                 enable: true,
                 max_enable: true,
-                max_limit: 10
+                max_limit: 10,
+                name: this.sensorList[indexSet].sensor[indexSensor]
               };
               db.collection(project_config)
                 .doc(fieldName)
@@ -150,7 +153,8 @@ export default {
                 index: count,
                 enable: true,
                 max_enable: true,
-                max_limit: 10
+                max_limit: 10,
+                name: this.sensorList[indexSet].sensor[indexSensor]
               };
               db.collection(project_config)
                 .doc(fieldName)

@@ -12,17 +12,7 @@
             alt
           />
         </div>
-        <div align="center">
-          <q-input
-            outlined
-            v-model="input.username"
-            style="width:300px;"
-            label="Username"
-            color="black"
-            bg-color="grey-2"
-            dense
-          />
-        </div>
+
         <div align="center" class="q-pt-md">
           <q-input
             outlined
@@ -70,16 +60,7 @@
             alt
           />
         </div>
-        <div align="center">
-          <q-input
-            outlined
-            v-model="input.username"
-            style="width:300px;"
-            label="Username"
-            color="black"
-            bg-color="grey-2"
-          />
-        </div>
+
         <div align="center" class="q-pt-md">
           <q-input
             outlined
@@ -98,6 +79,7 @@
             label="Login"
             style="width:150px;"
             class="text-black"
+            @click="goToSettingMain()"
           />
         </div>
         <div align="center" class="q-pt-md">
@@ -127,22 +109,33 @@ export default {
   data() {
     return {
       input: {
-        username: ""
+        password: ""
+      },
+      system: {
+        password: ""
       }
     };
   },
   methods: {
     goToSettingMain() {
-      this.$router.push("settingmain");
+      if (this.input.password == this.system.password) {
+        this.$router.push("settingmain");
+      } else {
+        this.$q.notify({
+          message: "Password incorrect",
+          icon: "thumb_down",
+          position: "top",
+          color: "negative"
+        });
+      }
     }
   },
   mounted() {
     db.collection("road9_admin")
+      .doc("user")
       .get()
-      .then(doc => {
-        doc.forEach(data => {
-          console.log(data.data());
-        });
+      .then(data => {
+        this.system.password = data.data().password;
       });
   }
 };
